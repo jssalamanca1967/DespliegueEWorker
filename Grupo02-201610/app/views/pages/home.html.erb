@@ -1,0 +1,44 @@
+<% provide(:home_active, "active") %>
+<% provide(:title, "Inicio") %>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <% if current_empresa %>
+          <ul>
+            <h1>Bienvenido <%= current_empresa.nombre_empresa_real %>!</h1>
+            Tienes proyectos de diseño para tu empresa, seguramente hay muchos diseños esperando por ti
+          </ul>
+        <% else %>
+          <ul>
+            <h1>Bienvenidos a DesignMatch!</h1>
+            <p>Somos una compañia que ofrece plataforma para que Compañias y Diseñadores unan sus ideas y proyectos¡</p>
+            <div class="btn-group center-block" role="group" aria-label="...">
+              <a class="btn btn-primary btn-lg" href="/signup" role="button"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>  Registrate</a>
+              <a class="btn btn-success btn-lg" href="/login" role="button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Iniciar Sesión</a>
+            </div>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-6 text-justify">
+          <h2>Para Empresas</h2>
+          <p>Recuerdas esos dias donde contratabas a un diseñador y le indicabas lo que tu querias y el juraba que te había entendido, pero en la entrega final, resulta que no te gusto nada de lo que hizo y aún asi le pagaste¡¡
+          <b>Ya no más¡¡</b> Escoge el mejor proyecto de una gran variedad de opciones y estilos que son exactamente lo que habías pedido.</p>
+        </div>
+        <div class="col-md-6 text-justify">
+          <h2>Para Clientes</h2>
+          <p>Recuerdas cuando tu, diseñador, hiciste tu máximo esfuerzo en tu proyecto intentando satisfacer los pedidos de una empresa, pero que al final no les gusto lo que hiciste.
+          <b>Ya no más¡¡</b> Postulate a los proyectos que quieras y que te sientas más libre de trabajar.</p>
+        </div>
+      </div>
+      <hr>
+
+      <footer>
+        <p>&copy; 2015 DesignMatch, Inc. Grupo Cloud 02</p>
+      </footer>
+    </div> <!-- /container -->

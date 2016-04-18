@@ -1,0 +1,19 @@
+<% provide(:info_empresa_active, "active") %>
+
+<div class="container">
+  <div class="login">
+    <%= form_for @new_empresa, :class=>"form-signin" do |f| %>
+    <h2 class="form-signin-heading">Registro de Usuario</h2>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :nombre_empresa, :class => "form-control", :placeholder => "Nombre de la Empresa" %>
+          <%= f.email_field :email, :class => "form-control", :placeholder => "Email" %>
+          <%= f.password_field :password_digest, :class => "form-control", :placeholder => "Contraseña" %>
+        </div>
+      </div>
+      <div class="form-actions">
+        <%= f.submit "Registra tu Empresa", class: "btn-submit btn-lg btn-primary btn-block" %>
+      </div>
+    <% end %>
+  </div>
+</div> <!-- /container -->

@@ -1,0 +1,18 @@
+<% provide(:info_empresa_active, "active") %>
+<% provide(:title, "Proyectos") %>
+
+
+<h1>Proyectos</h1>
+<p>A continuación se muestra todos los proyectos que hay sin discriminar la empresa a la que pertenecen</p>
+<div class="content">
+  <% @proyectos.each do |p| %>
+      <div class="context-row">
+        <h3><b>Nombre: </b><%= p.nombre %></h3>
+        <h3><b>Descripción: </b><%= p.descripcion %></h3>
+        <h3><b>Valor a pagar: </b><%= p.valor_pagar %></h3>
+        <h3><%= link_to "Ver más", proyecto_path(p) %></h3>
+        <h3><%= link_to "Editar", edit_proyecto_path(p) %></h3>
+
+      </div>
+  <% end %>
+</div>

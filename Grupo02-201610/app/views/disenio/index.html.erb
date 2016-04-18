@@ -1,0 +1,14 @@
+<h1>Diseños</h1>
+
+<div class="content">
+  <% @disenios.each do |p| %>
+      <div class="context-row">
+        <h3><b>Nombre diseñador: </b><%= p.nombre_diseniador %> <%= p.apellido_diseniador%></h3>
+        <h3><b>Email diseñador: </b><%= p.email_diseniador %></h3>
+        <h3><b>Estado: </b><%= p.estado %></h3>
+        <h3><b>Precio solicitado: </b><%= p.precio_solicitado %></h3>
+        <h3><%= link_to "Ver más", "/empresas/#{@empresa.nombre_empresa}/#{@proyecto.id_proyecto}/#{p.id}" %></h3>
+        <h3><%= link_to "Editar", "/empresas/#{@empresa.nombre_empresa}/#{@proyecto.id_proyecto}/#{p.id}/edit" %></h3><br>
+      </div>
+  <% end %>
+</div>

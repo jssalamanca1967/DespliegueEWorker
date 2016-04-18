@@ -1,0 +1,13 @@
+<% if @disenio.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      Hay <%= pluralize(@disenio.errors.count, "error") %>.
+      <ul>
+      <% @disenio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+
+  </div>
+<% end %>

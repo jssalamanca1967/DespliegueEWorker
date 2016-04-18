@@ -1,0 +1,29 @@
+<% provide(:info_empresa_active, "active") %>
+<% provide(:title, "#{@empresa.nombre_empresa}") %>
+
+<div class="container">
+  <div class="page-header">
+    <h2><small>Proyecto: </small> <%= @proyecto.nombre%></h1>
+  </div>
+
+  <div class="context-row">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Información</h2>
+        <% p = @disenio %>
+        <p><b>Nombre diseñador: </b><%= p.nombre_diseniador %> <%= p.apellido_diseniador%></p>
+        <p><b>Email diseñador: </b><%= p.email_diseniador %></p>
+        <p><b>Estado: </b><%= p.estado %></p>
+        <p><b>Precio solicitado: </b><%= p.precio_solicitado %></p>
+      </div>
+      <div class="col-md-8">
+        <img src="https://s3-us-west-2.amazonaws.com/despliegued/<%= p.picture %>" class="img-responsive">
+     </div>
+    </div>
+    <br>
+    <div class="btn-group" role="group" aria-label="...">
+      <%= link_to "Editar", "/empresas/#{@empresa.nombre_empresa}/#{@proyecto.id}/#{p.id}/edit", :class => "btn btn-warning", :role => "button"  %>
+      <%= link_to "Eliminar", "/empresas/#{@empresa.nombre_empresa}/#{@proyecto.id}/#{p.id}/destroy", :class => "btn btn-danger", :role => "button" %>
+    </div>
+  </div>
+</div>
